@@ -39,6 +39,7 @@ export default function VideoBackground({ src, opacity = 0.5 }) {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+      
       <video 
         ref={videoRef}
         className="absolute object-cover w-full h-full"
