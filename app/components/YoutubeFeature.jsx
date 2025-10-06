@@ -28,7 +28,7 @@ export default function YoutubeFeature() {
           transition={{ duration: 0.8 }}
         >
           <div className="relative aspect-video">
-            <iframe width="780" height="600" src="https://www.youtube.com/embed/eaeInlJwQcM?si=3QtfaPlnf1pk2eLZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="850" height="600" src="https://www.youtube.com/embed/eaeInlJwQcM?si=3QtfaPlnf1pk2eLZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           
           <div className="p-6">
