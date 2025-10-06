@@ -176,11 +176,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="order-1 md:order-2 relative"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff00ff]/30 to-[#00ffff]/30 rounded-lg blur-xl"></div>
-              <div className="absolute inset-[-5px] bg-gradient-to-r from-[#ff00ff] via-transparent to-[#00ffff] opacity-40 rounded-lg"></div>
-              <div className="relative z-10 bg-black/50 border border-[#ff00ff]/30 rounded-lg overflow-hidden group">
-                <div className="absolute inset-0 bg-grid opacity-20 z-0"></div>
+            
+                
                 <Image
                   src="/OC for Website Adjusted.png"
                   alt="Buzzare 3D Character"
@@ -199,8 +196,7 @@ export default function HeroSection() {
                     times: [0, 0.5, 1]
                   }}
                 ></motion.div>
-              </div>
-            </div>
+              
           </motion.div>
         </div>
       </div>
