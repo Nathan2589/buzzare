@@ -172,7 +172,7 @@ export default function HeroSection() {
           {/* Hero image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={shouldAnimate ? { opacity: 0, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            animate={shouldAnimate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="order-1 md:order-2 relative"
           >
@@ -188,7 +188,7 @@ export default function HeroSection() {
                 />
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-t from-[#ff00ff]/70 via-transparent to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500 z-20"
-                  animate={{ opacity: [0, 0.15, 0] }}
+                  animate={{ opacity: [0, 0, 0] }}
                   transition={{ 
                     repeat: Infinity, 
                     duration: 3,
