@@ -172,7 +172,7 @@ export default function HeroSection() {
           {/* Hero image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={shouldAnimate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            animate={shouldAnimate ? { opacity: 0, scale: 1 } : { opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="order-1 md:order-2 relative"
           >
