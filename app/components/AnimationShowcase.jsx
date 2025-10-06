@@ -2,35 +2,36 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { pressStart, russoOne } from "../fonts";
+import { VIDEO_URLS } from '../../lib/video-urls';
 
-// Animation clips data
+// Animation clips data - updated to use blob URLs
 const ANIMATION_CLIPS = [
   {
     id: 1,
     title: "Realistic Camera Movements",
     description: "This clip shows off the camera tracking technology behind my realistic handheld camera movements",
-    file: "/website clip 29759-10227.mp4",
+    file: VIDEO_URLS.clip1,
     color: "#ff00ff" // Magenta theme
   },
   {
     id: 2,
-    title: "Environment Building",
+    title: "Environment Building", 
     description: "This clip demonstrates my ability to create immersive and cinematic environments",
-    file: "/website clip 52649-2804.mp4",
+    file: VIDEO_URLS.clip2,
     color: "#00ffff" // Cyan theme
   },
   {
     id: 3,
     title: "ANIMATION 03",
     description: "Description text for Animation 03. This is a placeholder for custom text.",
-    file: "/website clip 63356-3687.mp4",
+    file: VIDEO_URLS.clip3,
     color: "#ff00ff" // Magenta theme
   },
   {
     id: 4,
     title: "Cinematic Lighting",
     description: "This clip shows off my rich understanding of how to use lighting effectively to immerse viewers in jarring scenes",
-    file: "/website clip 78294-8485.mp4",
+    file: VIDEO_URLS.clip4,
     color: "#00ffff" // Cyan theme
   }
 ];
@@ -311,4 +312,4 @@ export default function AnimationShowcase() {
       </div>
     </div>
   );
-} 
+}

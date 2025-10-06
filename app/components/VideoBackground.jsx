@@ -1,14 +1,27 @@
 "use client";
 import React, { useRef, useEffect, useState } from 'react';
 import { pressStart } from '../fonts';
-
+import { VIDEO_URLS } from '../../lib/video-urls';
 
 export default function VideoBackground({ src, opacity = 0.5 }) {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [videoSrc, setVideoSrc] = useState('');
 
   useEffect(() => {
-    if (videoRef.current) {
+    // Map local paths to blob URLs
+    const getVideoUrl = (localPath) => {
+      if (localPath === '/background.mp4' || localPath === '/new-background.mp4') {
+        return VIDEO_URLS.background;
+      }
+      return localPath; // fallback for other videos
+    };
+
+    setVideoSrc(getVideoUrl(src));
+  }, [src]);
+
+  useEffect(() => {
+    if (videoRef.current && videoSrc) {
       // Check if video is already loaded (handles refresh case)
       if (videoRef.current.readyState >= 3) {
         setIsLoaded(true);
@@ -35,11 +48,14 @@ export default function VideoBackground({ src, opacity = 0.5 }) {
       
       return () => clearTimeout(safetyTimer);
     }
-  }, []);
+  }, [videoSrc]);
+
+  if (!videoSrc) {
+    return null; // Don't render until we have the video URL
+  }
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-      
       <video 
         ref={videoRef}
         className="absolute object-cover w-full h-full"
@@ -56,7 +72,7 @@ export default function VideoBackground({ src, opacity = 0.5 }) {
           console.log("Video can play through");
         }}
       >
-        <source src={'/background.mp4'} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       
